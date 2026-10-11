@@ -1,0 +1,33 @@
+:root{font-family:Arial,Helvetica,sans-serif;color:#050505;background:#d1d1d1;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px}
+button,input{font:inherit}
+button{cursor:pointer}
+.page{width:min(100%,1216px);min-height:100vh;margin:auto;padding:42px 42px 29px}
+.site-heading{display:flex;flex-direction:column;align-items:center;margin:0 0 32px;font-weight:800;letter-spacing:-5px;line-height:.78;text-align:center;font-size:80px}
+.site-heading span:last-child{color:#e2ff00;margin-top:3px}
+.power{display:block;width:100%;height:68px;border:0;border-radius:20px;background:#000;color:#e2ff00;text-align:center;font-size:42px;letter-spacing:-1.8px;font-weight:800;transition:background .15s,color .15s}
+.power.is-on{background:#e2ff00;color:#000}
+.power:focus-visible,.wave-button:focus-visible,input:focus-visible{outline:3px solid #666;outline-offset:4px}
+.synth-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px;margin-top:33px}
+.synth-card{background:#fff;border-radius:27px;padding:27px 27px 26px;min-width:0}
+.synth-header{display:flex;align-items:center;justify-content:space-between;height:55px}
+.synth-header h2{font-size:42px;letter-spacing:-2px;line-height:1;margin:0;font-weight:800}
+.synth-number{display:grid;place-items:center;background:#e5e5e5;border-radius:50%;height:51px;width:51px;font-size:27px;font-weight:700}
+.card-controls{display:flex;flex-direction:column;gap:30px;margin-top:36px}
+.slider-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;position:relative;height:33px}
+.slider-bound{font-weight:700;font-size:14px;color:#898989;align-self:center}
+.slider-title,.type-title{font-size:31px;font-weight:800;letter-spacing:-1.3px;color:#898989;line-height:1.1}
+.slider-title{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
+.control-slider input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:57px;background:#e5e5e5;border-radius:40px;margin:0;display:block;cursor:pointer;touch-action:none}
+.control-slider input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;height:51px;width:51px;border-radius:50%;background:#e2ff00;border:0;box-shadow:none}
+.control-slider input[type=range]::-moz-range-thumb{height:51px;width:51px;border-radius:50%;background:#e2ff00;border:0;box-shadow:none}
+.type-control{padding-top:4px}
+.type-title{text-align:center;margin:0 0 23px}
+.wave-buttons{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.wave-button{border:0;border-radius:9px;background:#e5e5e5;color:#858585;height:80px;font-size:14px;font-weight:700;letter-spacing:-.3px;min-width:0;padding:0 3px;transition:background .12s,color .12s}
+.wave-button.selected{background:#e2ff00;color:#050505}
+.footer{display:flex;justify-content:space-between;align-items:center;font-size:33px;letter-spacing:-1.4px;font-weight:800;margin-top:48px;line-height:1.2}
+.error{font-size:14px;text-align:center}
+@media(max-width:800px){.page{padding:24px 18px 24px}.site-heading{font-size:clamp(35px,7.6vw,67px);letter-spacing:-2.5px;margin-bottom:28px}.power{height:60px;font-size:35px}.synth-grid{gap:18px;margin-top:20px}.synth-card{padding:18px 13px 22px;border-radius:22px}.synth-header h2{font-size:30px}.synth-number{height:39px;width:39px;font-size:23px}.card-controls{gap:27px;margin-top:26px}.slider-title,.type-title{font-size:23px}.slider-bound{font-size:11px}.control-slider input[type=range]{height:43px}.control-slider input[type=range]::-webkit-slider-thumb{height:39px;width:39px}.control-slider input[type=range]::-moz-range-thumb{height:39px;width:39px}.wave-buttons{gap:5px}.wave-button{font-size:10px;height:57px}.type-title{margin-bottom:17px}.footer{font-size:25px;margin-top:32px}}
+@media(max-width:540px){.synth-grid{grid-template-columns:1fr}.synth-card{padding:22px 24px 28px}.wave-button{height:70px;font-size:12px}.footer{font-size:19px}.site-heading{font-size:clamp(37px,9.2vw,55px)}}
