@@ -32,7 +32,7 @@ function SynthCard({ number, config, onParameter }) {
   return (
     <section className="synth-card" aria-label={`Synth ${number}`}>
       <header className="synth-header">
-        <h2>Synth</h2>
+        <h2>{number === 1 ? "Lead Synth" : "Bass Synth"}</h2>
         <span className="synth-number">{number}</span>
       </header>
       <div className="card-controls">
